@@ -1,5 +1,16 @@
 # @cloudflare/runtime-types
 
+## 0.1.25
+
+### Patch Changes
+
+- [#16625](https://github.com/cloudflare/workers-sdk/pull/16625) [`d87fdfe`](https://github.com/cloudflare/workers-sdk/commit/d87fdfed72a7ca98021d3a5cb2de70485ec657c8) Thanks [@petebacondarwin](https://github.com/petebacondarwin)! - Load the Workers runtime only when generating runtime types
+
+  Defer loading workerd until `generateRuntimeTypes()` is called, and load Miniflare only on a cache miss. Importing the package or using its header helpers no longer resolves the workerd binary, so tooling can use these helpers on platforms without a supported runtime.
+
+- Updated dependencies [[`4e7e9f1`](https://github.com/cloudflare/workers-sdk/commit/4e7e9f12b7996415fb63ae72a6d2c2f6ac3640ed), [`267dadb`](https://github.com/cloudflare/workers-sdk/commit/267dadbe69ac8221febef059382cec68eaec1b19), [`44b39b0`](https://github.com/cloudflare/workers-sdk/commit/44b39b02765d246479f49b690f9e9b3d8645a303)]:
+  - miniflare@5.20261109.1-beta
+
 ## 0.1.24
 
 ### Patch Changes
